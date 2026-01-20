@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 50 29% 95%;
+    --foreground: 214 97% 25%;
+
+    --card: 50 29% 97%;
+    --card-foreground: 214 97% 25%;
+
+    --popover: 50 29% 97%;
+    --popover-foreground: 214 97% 25%;
+
+    --primary: 214 97% 25%;
+    --primary-foreground: 50 29% 95%;
+
+    --secondary: 142 76% 36%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 50 20% 90%;
+    --muted-foreground: 214 30% 40%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 50 20% 85%;
+    --input: 50 20% 85%;
+    --ring: 214 97% 25%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --radius: 0.75rem;
+    
+    /* Educational theme gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 97% 25%) 0%, hsl(214 97% 35%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 46%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(214 97% 25%) 0%, hsl(142 76% 36%) 100%);
+
+    --sidebar-background: 50 29% 95%;
+    --sidebar-foreground: 214 97% 25%;
+    --sidebar-primary: 214 97% 25%;
+    --sidebar-primary-foreground: 50 29% 95%;
+    --sidebar-accent: 50 20% 90%;
+    --sidebar-accent-foreground: 214 97% 25%;
+    --sidebar-border: 50 20% 85%;
+    --sidebar-ring: 214 97% 25%;
+  }
+
+  .dark {
+    --background: 214 97% 12%;
+    --foreground: 50 29% 95%;
+
+    --card: 214 97% 17%;
+    --card-foreground: 50 29% 95%;
+
+    --popover: 214 97% 17%;
+    --popover-foreground: 50 29% 95%;
+
+    --primary: 214 80% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 142 76% 36%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 214 50% 20%;
+    --muted-foreground: 50 20% 70%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 50 29% 95%;
+
+    --border: 214 50% 25%;
+    --input: 214 50% 25%;
+    --ring: 214 80% 55%;
+    
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(214 80% 55%) 0%, hsl(214 80% 45%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 46%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(214 80% 55%) 0%, hsl(142 76% 36%) 100%);
+    --sidebar-background: 214 97% 12%;
+    --sidebar-foreground: 50 29% 95%;
+    --sidebar-primary: 214 80% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 214 50% 20%;
+    --sidebar-accent-foreground: 50 29% 95%;
+    --sidebar-border: 214 50% 25%;
+    --sidebar-ring: 214 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* 3D Flip Card Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}

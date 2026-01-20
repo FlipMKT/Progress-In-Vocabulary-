@@ -1,0 +1,7 @@
+project_id = "vycdmafbuigvkfhgvtbe"
+
+[functions.create-test-users]
+verify_jwt = false
+
+[functions.create-pupil]
+verify_jwt = false
